@@ -6,13 +6,13 @@ export const listHadiah = (req,res) =>{
 
 export const createNewHadiah = async(req,res)=>{
 try{
-    const { penerima, hadiah, harga, sudahDisiapkan } = req.body;
+    const { penerima, hadiah, harga, tanggalUltah } = req.body;
 
     const response = await hadiahModel.create({
     penerima,
     hadiah,
     harga,
-    sudahDisiapkan
+    tanggalUltah
     })
 
     res.status(201).json({
