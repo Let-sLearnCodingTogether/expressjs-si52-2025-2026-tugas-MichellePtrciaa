@@ -4,9 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start" : "nodemon app.js",
-    "dev" : "nodemon app.js"
-    },
+    "start": "nodemon app.js",
+    "dev": "nodemon app.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Let-sLearnCodingTogether/expressjs-si52-2025-2026-tugas-MichellePtrciaa.git"
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Let-sLearnCodingTogether/expressjs-si52-2025-2026-tugas-MichellePtrciaa#readme",
   "description": "",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
