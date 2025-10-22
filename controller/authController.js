@@ -31,21 +31,20 @@ export const register = async (req,res) => {
 
 export const login = async (req,res) => {
     try {
-        //untuk mengambil body atau data dari request
+        
         const loginData = req.body
-        //mencari user bedasarkan email didatabase
+       
         const user = await UserModel.findOne({
             email : loginData.email
         })
 
-        //jika user tidak ditemukan
         if(!user){
             return res.status(404).json({
                 message:"User tidak ditemukan",
                 data:null
             })
         }
-        //membandingkan password yang ada didalam db dengan request
+        
         if(user.password==loginData.password){
              res.status(200).json({
                 message : "Login Berhasil",
