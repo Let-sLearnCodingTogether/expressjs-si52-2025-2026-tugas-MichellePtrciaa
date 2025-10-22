@@ -38,10 +38,67 @@ try{
 }
 }
 
-export const updateHadiah = (req,res)=>{
-    res.send("Update Hadiah");
+export const updateHadiah = async (req,res)=>{
+    try {
+        const id = req.params?.id
+        const request =req.body
+        if(!id){
+            return res.status(500).json({
+                message: "Id wajib di isi",
+                data:null
+            })
+        }
+        const response = await hadiahModel.findByIdAndUpdate(id,{
+            penerima :request.penerima,
+            hadiah : request.hadiah,
+            harga: request.harga,
+            tanggalUltah: request.tanggalUltah
+        })
+
+        if (!response){
+            return res.status(500).json({
+                message : "Hadiah gagal di update",
+                data:null
+            })
+        }
+        return res.status(200).json({
+            message : "Hadiah berhasil di update",
+            data:null
+        })
+    } catch (error) {
+        res.status(500).json({
+            message : error,
+            data : null
+        })
+    }
 }
 
-export const deleteHadiah = (req,res)=>{
-    res.send("Delete Hadiah");
-}
+export const deleteHadiah = async (req,res)=>{
+    try {
+        const id = req.params.id
+
+        if(!id){
+            return res.status(500).json({
+                message: "Id wajib di isi",
+                data:null
+            })
+        }
+        const response = await hadiahModel.findByIdAndDelete(id)
+
+        if (response){
+            return res.status(200).json({
+                message : "Hadiah berhasil dihapus",
+                data:null
+            })
+        }
+        return res.status(404).json({
+            message : "Hadiah tidak ditemukan",
+            data:null
+        })
+    } catch (error) {
+        res.status(500).json({
+            message : error,
+            data : null
+        })
+    }
+  }

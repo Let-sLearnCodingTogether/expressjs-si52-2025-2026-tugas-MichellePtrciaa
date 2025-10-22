@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "9014f2d7-26b8-4281-aab6-d09b1232392a",
+		"name": "DaftarHadiah",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49192250",
+		"_collection_link": "https://michelleptrciaa-1335365.postman.co/workspace/misel's-Workspace~afcf74e5-bca6-4289-8458-681f05ca3adb/collection/49192250-9014f2d7-26b8-4281-aab6-d09b1232392a?action=share&source=collection_link&creator=49192250"
+	},
+	"item": [
+		{
+			"name": "createHadiah",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"penerima\" : \"mona\",\r\n    \"hadiah\": \"mobil\",\r\n    \"harga\": 1000000000,\r\n    \"tanggalUltah\": \"29 desember\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/hadiah",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hadiah"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "readHadiah",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"penerima\" : \"mona\",\r\n    \"hadiah\": \"mobil\",\r\n    \"harga\": 1000000000,\r\n    \"tanggalUltah\": \"29 desember\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/hadiah",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hadiah"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateHadiah",
+			"request": {
+				"method": "PUT",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "deleteHadiah",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"michelle paticia\",\r\n    \"email\": \"michelleptrciaa@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
